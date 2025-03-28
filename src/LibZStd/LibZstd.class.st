@@ -1,8 +1,8 @@
 Class {
 	#name : 'LibZstd',
 	#superclass : 'FFILibrary',
-	#category : 'LibZStd',
-	#package : 'LibZStd'
+	#category : 'LibZstd',
+	#package : 'LibZstd'
 }
 
 { #category : 'constants' }

@@ -1,1 +1,1 @@
-Package { #name : 'LibZStd' }
+Package { #name : 'LibZstd' }
