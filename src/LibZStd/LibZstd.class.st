@@ -5,6 +5,20 @@ Class {
 	#package : 'LibZStd'
 }
 
+{ #category : 'constants' }
+LibZstd class >> contentSizeError [
+	"Returned by getFrameContentSize if an error occurred (e.g. invalid magic number, buffer size too small)"
+
+	^ 16rFFFFFFFFFFFFFFFE
+]
+
+{ #category : 'constants' }
+LibZstd class >> contentSizeUnknown [
+	"Returned by getFrameContentSize if the size cannot be determined, data to decompress could be any size."
+
+	^ 16rFFFFFFFFFFFFFFFF
+]
+
 { #category : 'compressing' }
 LibZstd >> compress: source size: srcSize into: destination capacity: dstCapacity compressionLevel: compressionLevel [
 	"Compresses `source` content as a single zstd compressed frame into already allocated `destination`.
